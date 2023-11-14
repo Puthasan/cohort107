@@ -103,5 +103,7 @@ body {
 /* Add styles for different percentage bars */
 .percentage-bar:nth-child(odd) .progress {
   background-color: rgb(0, 255, 64);
+  height: 100%;
+  transition: width 0.5s;
   /* Different color for odd bars */
 }
