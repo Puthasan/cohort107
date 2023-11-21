@@ -33,7 +33,7 @@
 // copyOfMovies.push('Batman 2');
 // console.log(copyOfMovies);
 
-// // removing the last element in the array
+//? removing the last element in the array
 // const lastEle = copyOfMovies.pop();
 
 // console.log(copyOfMovies);
