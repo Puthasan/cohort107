@@ -49,6 +49,7 @@ const multiply = (a, b) => a * b;
 //   return a * b
 // }
 
+
 const newResult = multiply(3, 3);
 
 console.log(newResult);
@@ -101,3 +102,121 @@ function getDevObject(name, ...skills) {
 
 const devObj = getDevObject('Maria', 'HTML', 'CSS', 'JS', 'React');
 console.log(devObj);
+
+
+// Default Parameter
+function setColor(bike, brand, color = 'black', size = 20) {
+  bike.color = color;
+  bike.brand = brand;
+  bike.size = size;
+}
+
+const b1 = {}
+
+setColor(b1, 'some brand', 'purple');
+
+console.log(b1);
+
+const b2{}
+
+setColor(b2, 'brand2', 'hot pink', 18);
+console.log(b2);
+
+const colors = ['red', 'green', 'blue'];
+
+colors.forEach(function(element) {
+  console.log(element.toLocaleUpperCase());
+});
+
+//
+(function() {
+  console.log('running fuction script');
+})();
+
+
+// function hoist() {
+//   console.log(x);
+//   let x = 25;
+//   console.log(x);
+// }
+
+// hoist();
+
+// let x = 5;
+
+
+// let myVar = 20;
+
+// function passBy(x) {
+//   x = x * 10;
+// }
+
+// console.log(myVar);
+// console.log(passBy(myVar));
+// console.log(myVar);
+
+
+// let a = 10;
+// let b = a;  // copy the value of a
+
+// a = 100;
+
+// console.log(a);
+// console.log(b);
+
+
+// let myVar = { value: 20, type: 'Number' }
+
+// function passBy(x) {
+//   x.value = x.value * 20;
+// }
+
+// console.log(myVar);  // 20
+// passBy(myVar);  // 200
+// console.log(myVar);  // 400
+
+
+// const user1 = {name: 'alex'};
+
+// const user2 = user1;
+
+// user1.name = 'max';
+
+// console.log(user1);
+// console.log(user2);
+
+let numArray = [
+  { value: 10 },
+  { value: 20 },
+  { value: 0 },
+  { value: -10 }, 
+  { value: 15 }, 
+  { value: 28 }, 
+  { value: -1000 },
+  { value: 42 },
+  { value: 7 }
+];
+
+function returnEven(array) {
+  let newArray = [];
+
+  array.forEach((element) => {
+      if (element.value % 2 == 0) {
+          newArray.push(element);
+      }
+  });
+
+  return newArray;
+}
+
+let newArray = returnEven(numArray);
+
+newArray[0].value += 10;
+
+numArray[3].value = 67;
+
+let myEvenValue = newArray[1].value;
+myEvenValue /= 2;
+
+console.log(numArray[0]);
+console.log(numArray[3]);
